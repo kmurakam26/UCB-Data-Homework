@@ -1,0 +1,194 @@
+
+/* Giving the body the specified background color, adding font sizes for the h1 and h3 elements we'll be using */
+h1 {
+  position: relative;
+  font-size:30px;
+  color: white;
+  padding-top: 9px;
+  width: 150px;
+  height: 40px;
+  background: #009999;
+  text-align: center;
+  left: 50px;
+  font-family: 'arial';
+}
+
+h1a {
+  position: relative;
+  font-size:30px;
+  color: white;
+  padding-top: 9px;
+  width: auto;
+  height: 40px;
+  background: #009999;
+  text-align: center;
+  left: 50px;
+  font-family: 'arial';
+}
+/*Latitude vs X heading*/
+h2 {
+  position: relative;
+  font-size:30px;
+  color: #009999;
+  background: white;
+  left: 10%;
+  top: 90px;
+  width: 375px;
+  z-index: 3;
+  font-family: 'arial';
+}
+
+h3 {
+  position: relative;
+  font-size:25px;
+  color: #009999;
+  background: white;
+  left: 3%;
+  bottom: 20px;
+  width: 75px;
+  z-index: 3;
+  font-family: 'Arial';
+}
+
+/* Giving our navbar some padding and a background color */
+.navbar {
+  position:relative;
+  height: 10px;
+  left: 800px;
+  bottom: 10px;
+  color:  #595959;
+  z-index: 5;
+  font-family: 'arial';
+  align-items: center;
+}
+
+/*Gray background*/
+
+.backdrop {
+  position: fixed;
+  background: #cccc;
+  width: 100%;
+  height: 85%;
+  top: 20%;
+  z-index: 1;
+}
+
+
+/*Backgrounds for the text and image*/
+
+.backdrop2 {
+  position: fixed;
+  background: white;
+  width: 60%;
+  height: 73%;
+  top: 25%;
+  left: 50px;
+  z-index: 2;
+  color: #595959;
+}
+
+
+.backdrop3 {
+  position: fixed;
+  background: white;
+  width: 55%;
+  height: 25%;
+  bottom: 40%;
+  left: 100px;
+  color: #595959;
+  font-family: 'Arial';
+  line-height: 2;
+  z-index: 3;
+}
+/* For the four visualizations */
+.backdrop4 {
+  position: fixed;
+  background: white;
+  width: 33%;
+  height: 73%;
+  bottom: 13px;
+  right: 25px;
+  color: #595959;
+  font-family: 'Arial';
+  line-height: 2;
+  z-index: 3;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: ". ." ". .";
+  margin:5px;
+}
+
+body {
+  font-family: 'arial';
+  color: #595959;
+  width: 35%;
+  right: 5px
+}
+
+
+/* Making our navbar li's inline-block elements this makes it so we can have multiple on the same line. Floats could have been used too */
+.navbar li {
+  display: inline-block;
+  padding: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 3px;
+}
+
+/* Getting rid of the default link styles here */
+.navbar li a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Styling the header, giving it a height, a background color, and some top padding */
+.header {
+  height: 200px;
+  padding-top: 20px;
+  background: #cdcdcd;
+}
+
+/* Centering our h1 tag inside our header, giving it a little padding, removing its margin */
+.header h1 {
+  padding: 60px;
+  margin: 0;
+  color: #000;
+  text-align: center;
+}
+
+/* Giving the .post element margin on 3 sides */
+.post {
+  margin-top: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+#nav-select {
+  visibility: hidden;
+}
+
+/* Adding media queries to show the drop-down, and hide the navbar when the screen is smaller than 480 pixels */
+@media (max-width: 480px) {
+  .navbar li {
+    padding: 10px;
+  }
+
+  .post {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  .navbar ul {
+    visibility: hidden;
+  }
+
+  #nav-select {
+    visibility: visible;
+  }
+}
